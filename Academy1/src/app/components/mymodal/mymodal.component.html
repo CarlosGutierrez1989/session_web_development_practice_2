@@ -1,0 +1,12 @@
+<div class="modal-header" [ngClass]="{
+            'positive' : number > 0,
+            'negative' : number < 0
+         }" >
+    <h4 class="modal-title" >{{my_modal_title}}</h4>
+  </div>
+  <div class="modal-body">
+    <p> {{my_modal_content}}</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>

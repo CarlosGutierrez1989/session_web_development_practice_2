@@ -1,0 +1,40 @@
+<div id="bodyaddSong" class="container bodyaddSong">
+    <div class="row">
+    <div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <h4 class="card-title mt-3 text-center">Add new Singer</h4>
+    
+        <form>
+            <div class="row">
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-microphone"></i> </span>
+                    </div>
+                    <input id="name" class="form-control" placeholder="Name" type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+                    
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-paper-plane-o"></i> </span>
+                    </div>
+                    <input id="web_page" class="form-control" placeholder="Web page" type="text" [(ngModel)]="web_page" [ngModelOptions]="{standalone: true}">
+                </div> <!-- form-group// -->
+              
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block" (click)="createArtist()"> Create  </button>
+                </div> <!-- form-group// -->      
+            </div>
+                                         
+    </form>
+    <h4 class="card-title mt-3 text-center">Singer name: <h3>{{name}}</h3> </h4>
+    <h4 class="card-title mt-3 text-center">Singer web page: <h3>{{web_page}}</h3></h4>
+    </article>
+
+    </div> <!-- card.// -->
+
+    </div>
+    </div> 
+
+    <!--container end.//-->
+    

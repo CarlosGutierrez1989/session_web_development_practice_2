@@ -1,0 +1,11 @@
+.image-parent {
+    max-width: 40px;
+  }
+#order{
+  float: right
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,52 @@
+<body>
+<div id="header">
+    <div class="logo"></div>
+  </div>
+  <div id="main" class="logUser" *ngIf=wantLog>
+    <div class="loginfb"></div>
+    <div class="linel"></div>
+    <div class="liner"></div>
+
+    <div id="form">
+      <form [formGroup]="loginForm">
+          <input formControlName="name" id="name" name="input" placeholder="Username" type="text" />
+          <p *ngIf="loginForm.get('name').hasError('required') && loginForm.get('name').touched"> Username requiered</p>
+          <input formControlName="password" id="password" name="input" placeholder="Password" type="password" />
+          <p *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched"> Password requiered</p>
+          <h5>
+            Remember
+          </h5>
+          <input class="btn-toggle btn-toggle-round" id="btn-toggle-1" name="remember" type="checkbox" /><label for="btn-toggle-1"></label>
+          <input name="login" (click)="login()" type="submit" value="Log in" [disabled]="loginForm.invalid"/>
+      </form>
+    </div>
+
+    <div id="footer">
+      <a (click)="wantLog = false">Sign Up</a><br />
+      <a>Forgot Password?</a>
+    </div>
+
+  </div>
+
+  <div id="main" class="createUser" *ngIf=!wantLog>
+    <div class="loginfb"></div>
+    <div class="linel"></div>
+    <div class="liner"></div>
+    <div id="form">
+      <form [formGroup]="signupForm">
+        <input formControlName="createuser_name" id="createuser_name" name="input" placeholder="Username" type="text" />
+        
+        <input formControlName="createuser_email" id="createuser_email" name="input" placeholder="Email" type="text" />
+        <input formControlName="createuser_password" id="createuser_password" name="input" placeholder="Password" type="password" />
+
+        <input class="btn-toggle btn-toggle-round" id="btn-toggle-1" name="remember" type="checkbox" /><label for="btn-toggle-1"></label>
+        <input name="login" type="submit" (click)="createUser()" value="Create user"  [disabled]="signupForm.invalid"/>
+    </form>
+    </div>
+    <div id="footer">
+      <a (click)="wantLog = true">Log in</a><br />
+
+    </div>
+  </div>
+
+</body>

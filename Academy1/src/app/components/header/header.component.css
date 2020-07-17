@@ -1,0 +1,11 @@
+header{
+    background-color: black;
+}
+
+i{
+    background-color: black;
+}
+
+.mb-1, .my-1 {
+    margin-bottom: 0rem!important;
+}

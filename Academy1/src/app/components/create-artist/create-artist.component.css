@@ -1,0 +1,39 @@
+.bg-light {
+    background: linear-gradient(rgba(22, 22, 22, 0.989), rgba(22, 22, 22, 0.95), rgba(22, 22, 22, 0.989));
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#bodyaddSong {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.card  {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+.card-title{
+    color: white;
+}
+
+.row{
+    height: 100%;
+}
+
+ejs-datetimepicker
+{
+    background: white !important;
+    width: 100% !important;
+    
+}
+
+ng-select{
+    width: 90% !important;
+}
+
+h3{
+    color: rgba(58, 156, 51)
+}

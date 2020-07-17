@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~font-awesome/css/font-awesome.css';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+html {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+
+body {
+    height: 100% !important;
+    width: 100% !important;
+    background: linear-gradient(rgba(22, 22, 22, 0.989), rgba(22, 22, 22, 0.95), rgba(22, 22, 22, 0.989)), url(https://d2c87l0yth4zbw.global.ssl.fastly.net/i/home/lifestyle-discover-lg.jpg), center center fixed;
+    background-size: cover;
+}

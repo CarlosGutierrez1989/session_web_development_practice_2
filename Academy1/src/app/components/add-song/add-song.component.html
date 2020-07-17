@@ -1,0 +1,87 @@
+<div id="bodyaddSong" class="container bodyaddSong">
+<div class="row">
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Add new Song</h4>
+
+	<form>
+        <div class="row">
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-headphones"></i> </span>
+                </div>
+                <input id="song_name" class="form-control" placeholder="Song name" type="text">
+                
+            </div> <!-- form-group// -->
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-play-circle"></i> </span>
+                </div>
+                <input id="song_external_url" class="form-control" placeholder="External url" type="text">
+            </div> <!-- form-group// -->
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-picture-o"></i> </span>
+                </div>
+                <input id="song_image" class="form-control" placeholder="Image url" type="text">
+            </div> <!-- form-group// -->
+
+            <div class="form-group input-group">
+                <div class="input-group date">
+                    <input class="form-control" placeholder="yyyy-mm-dd"
+                    name="dp" [(ngModel)]="song_date" ngbDatepicker #d="ngbDatepicker">
+                    <div class="input-group-append">
+                    <button class="btn btn-outline-secondary calendar fa fa-calendar" (click)="d.toggle()" type="button"></button>
+                    </div>
+                </div>
+            </div> <!-- form-group// -->
+  
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-clock-o"></i> </span>
+                </div>
+                <input id="song_duration_ms" class="form-control" placeholder="Duration (ms)" type="text">
+            </div> <!-- form-group// -->
+
+
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-microphone"></i> </span>
+                </div>
+                
+                <ng-select [items]="categories"
+                bindLabel="name"
+                placeholder="Select artists"
+                appendTo="body"
+                multiple="true"
+                [(ngModel)]="selected"
+                [ngModelOptions]="{standalone: true}"
+                >
+                </ng-select>
+
+            </div> <!-- form-group end.// -->
+
+            <div class="row buttonsRow">
+                <div class="form-group col-md-12" >
+                    <button type="submit" class="btn btn-primary btn-block" (click)="createSong()"> Create Song  </button>
+                    
+                </div> <!-- form-group// -->    
+
+                <div class="form-group artistButton col-md-12">
+                    <button routerLink="addArtist" type="submit" class="btn btn-info btn-block "> Create Artist  </button>
+                </div> <!-- form-group// -->  
+            </div>
+            
+        </div>                                                          
+</form>
+</article>
+</div> <!-- card.// -->
+</div>
+</div> 
+<!--container end.//-->
+
+
+<router-outlet></router-outlet>
