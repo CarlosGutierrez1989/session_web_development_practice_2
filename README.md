@@ -1,4 +1,4 @@
-# Web Angular
+# Web (based on Angular Technology)
 
 *	Aplicación en Angular 9.
 *	Requisitos:
